@@ -54,6 +54,7 @@ async function getSearchData(searchStr){
 
 
 const placeHolder = document.querySelector(".container");
+const loaderElement = document.querySelector("#loader");
 
 function createCardTemplate({id, title, image, details}){
     // parent div
@@ -107,6 +108,7 @@ noElement.innerHTML = "No data Found!!"
 async function placeAllItems(){
     placeHolder.replaceChildren();
     const allData = await getAllData();
+    loaderElement.classList.add('hidden');
     if(allData.length > 0){
         allData.forEach(element => {
             const newElement = createCardTemplate(element);
@@ -124,6 +126,7 @@ async function placeSearchItems(){
     let searchString = inputBox.value;
     console.log(searchString);
     placeHolder.replaceChildren();
+    placeHolder.appendChild()
     let searchData = await getSearchData(searchString);
     if(searchData.length > 0){
         searchData.forEach(element => {
@@ -142,5 +145,8 @@ searchButton.addEventListener('click', (e) =>{
     placeSearchItems();
 })
 
-// placeAllItems();
+setTimeout(() =>{
+    placeAllItems();
+}, 1000);
+
 // placeSearchItems();
