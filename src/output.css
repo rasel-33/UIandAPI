@@ -238,6 +238,15 @@
   .mt-\[40px\] {
     margin-top: 40px;
   }
+  .mt-\[50px\] {
+    margin-top: 50px;
+  }
+  .mt-\[100px\] {
+    margin-top: 100px;
+  }
+  .mt-\[200px\] {
+    margin-top: 200px;
+  }
   .mr-\[5\%\] {
     margin-right: 5%;
   }
@@ -592,6 +601,16 @@
       font-size: 32px;
     }
   }
+  .md\:mt-\[50px\] {
+    @media (width >= 48rem) {
+      margin-top: 50px;
+    }
+  }
+  .md\:mt-\[100px\] {
+    @media (width >= 48rem) {
+      margin-top: 100px;
+    }
+  }
   .md\:mr-\[10\%\] {
     @media (width >= 48rem) {
       margin-right: 10%;
@@ -689,6 +708,16 @@
   .md\:text-\[36px\] {
     @media (width >= 48rem) {
       font-size: 36px;
+    }
+  }
+  .lg\:mt-\[50px\] {
+    @media (width >= 64rem) {
+      margin-top: 50px;
+    }
+  }
+  .lg\:mt-\[200px\] {
+    @media (width >= 64rem) {
+      margin-top: 200px;
     }
   }
   .lg\:mr-\[10\%\] {

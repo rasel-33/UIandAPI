@@ -10,8 +10,11 @@ const loaderElement = document.querySelector("#loader");
 
 let searchButton = document.querySelector('#searchButton');
 searchButton.addEventListener('click', (e) =>{
+    
     e.preventDefault();
+    
     placeSearchItems();
+    
 });
 
 let noElement = document.createElement('p');
@@ -33,6 +36,9 @@ async function placeAllItems(){
 
 
 
+setTimeout(() => {
+    loaderElement.classList.add("hidden");
+    
+    placeAllItems();
+}, 1000);
 
-
-placeAllItems();
