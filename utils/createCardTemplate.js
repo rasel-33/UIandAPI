@@ -26,6 +26,8 @@
 //          </div>
 //          <!-- Repeat card elements as needed -->
 
+import getItemDetails from "./getItemDetails.js";
+
 
 export default function createCardTemplate({id, title, image, details}){
     // parent div
@@ -58,8 +60,17 @@ export default function createCardTemplate({id, title, image, details}){
     //button element
     let buttonElement = document.createElement('button');
     buttonElement.setAttribute("type", "submit");
+    buttonElement.setAttribute('id', 'viewDetailsButton');
     buttonElement.classList.add("bg-orange-400", "hover:bg-orange-600", "text-white", "text-[14px]", "md:text-[16px]", "px-4", "py-2", "rounded-lg", "transition");
     buttonElement.innerHTML = "View Details"
+
+    buttonElement.addEventListener('click', (e) => {
+        e.preventDefault();
+        const overlappingSection = getItemDetails({id, title, image, details});
+        const footer = document.querySelector(".footer-area");
+        footer.before(overlappingSection);
+
+    });
 
     textDiv.appendChild(h2Element);
     textDiv.appendChild(pElement);

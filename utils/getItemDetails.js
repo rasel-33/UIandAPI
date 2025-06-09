@@ -1,0 +1,40 @@
+export default function getItemDetails({id, title, image, details}){
+    const parentSection = document.createElement('section');
+    parentSection.classList.add("full-view-area", "backdrop-blur-sm", "fixed", "inset-0", "z-10", "overflow-y-auto", "pt-[10px]", "sm:pt-[40px]", "md:pt-[60px]", "lg:pt-[100px]");
+    parentSection.setAttribute('id', 'overlappingSection');
+    const innerDiv = document.createElement('div');
+    innerDiv.classList.add("full-view", "w-full", "md:ml-[10%]", "md:mr-[10%]",  "md:w-[80%]",  "lg:ml-[15%]",  "lg:mr-[15%]",  "lg:w-[70%]", "px-[5%]", "min-h-screen");
+    const secondInnerDiv = document.createElement('div');
+    secondInnerDiv.classList.add("bg-white", "p-5", "rounded-2xl", "border", "border-dashed");
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add("shadow-2xl", "rounded-b-2xl");
+    const imageBox = document.createElement('img');
+    imageBox.setAttribute("src", image);
+    imageBox.classList.add("w-full", "max-h-[160px]", "sm:max-h-[280px]", "object-cover", "rounded-t-2xl");
+    const h2Element = document.createElement('h2');
+    h2Element.innerHTML = title;
+    h2Element.classList.add("text-xl", "font-bold", "mt-[15px]", "p-3");
+    const pElement = document.createElement('p');
+    pElement.innerHTML = details;
+    pElement.classList.add("mt-[10px]", "px-3", "text-[12px]", "md:text-sm", "lg:text-md", "pb-[20px]", "text-justify");
+    const buttonDiv = document.createElement("div");
+    buttonDiv.classList.add("flex", "justify-end", "mt-[20px]");
+    const button = document.createElement('button');
+    button.classList.add("px-5", "py-2", "bg-orange-400", "text-[10px]", "sm:text-[12px]", "md:text-[12px]", "lg:text-[14px]", "text-white", "rounded-lg");
+    button.setAttribute('id', "closeButton");
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const overlappingElement = document.getElementById("overlappingSection");
+        overlappingElement.remove();
+    });
+    button.innerHTML = "Close";
+    buttonDiv.appendChild(button);
+    contentDiv.appendChild(imageBox);
+    contentDiv.appendChild(h2Element);
+    contentDiv.appendChild(pElement);
+    secondInnerDiv.appendChild(contentDiv);
+    secondInnerDiv.appendChild(buttonDiv);
+    innerDiv.appendChild(secondInnerDiv);
+    parentSection.appendChild(innerDiv);
+    return parentSection;
+}
