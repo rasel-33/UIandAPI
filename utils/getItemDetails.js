@@ -1,6 +1,6 @@
 export default function getItemDetails({id, title, image, details}){
     const parentSection = document.createElement('section');
-    parentSection.classList.add("full-view-area", "backdrop-blur-sm", "fixed", "inset-0", "z-10", "overflow-y-auto", "pt-[10px]", "sm:pt-[40px]", "md:pt-[60px]", "lg:pt-[100px]");
+    parentSection.classList.add("full-view-area", "backdrop-blur-sm", "fixed", "inset-0", "z-10", "pt-[10px]", "sm:pt-[40px]", "md:pt-[60px]", "lg:pt-[100px]");
     parentSection.setAttribute('id', 'overlappingSection');
     const innerDiv = document.createElement('div');
     innerDiv.classList.add("full-view", "w-full", "md:ml-[10%]", "md:mr-[10%]",  "md:w-[80%]",  "lg:ml-[15%]",  "lg:mr-[15%]",  "lg:w-[70%]", "px-[5%]", "min-h-screen");
