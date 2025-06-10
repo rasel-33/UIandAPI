@@ -31,7 +31,7 @@ export default async function searchData(searchStr){
             const newElement = createCardTemplate(searchDataArray[i]);
             placeHolder.appendChild(newElement);
         }
-        
+        loaderElement.classList.add("hidden");
         
     } catch(err){
         placeHolder.replaceChildren();
