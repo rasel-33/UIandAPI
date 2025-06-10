@@ -39,6 +39,6 @@ export default async function searchData(searchStr){
     }
     setInterval(() => {
         loaderElement.classList.add("hidden");
-    }, 200);
+    }, 1000);
     
 }
