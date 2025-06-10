@@ -39,8 +39,6 @@ export default async function searchData(searchStr){
         console.log("Oh allah make it possible!!");
         placeHolder.appendChild(noElement);
     }
-    setInterval(() => {
-        loaderElement.classList.add("hidden");
-    }, 1000);
+    
     
 }
