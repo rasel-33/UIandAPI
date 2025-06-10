@@ -13,6 +13,8 @@ export default async function searchData(searchStr){
     console.log(searchStr);
     let searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchStr}`;
     try{
+        placeHolder.replaceChildren();
+        loaderElement.classList.remove("hidden");
         console.log(searchUrl);
         const response = await fetch(searchUrl);
         const data = await response.json();
@@ -23,8 +25,8 @@ export default async function searchData(searchStr){
             details: strInstructions,
             image: strMealThumb
         }));
-        loaderElement.classList.remove("hidden");
-        placeHolder.replaceChildren();
+        
+        
         for(let i = 0; i < searchDataArray.length; i++){
             const newElement = createCardTemplate(searchDataArray[i]);
             placeHolder.appendChild(newElement);
