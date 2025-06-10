@@ -1,6 +1,7 @@
 import getAllData from "./utils/allData.js";
 import createCardTemplate from "./utils/createCardTemplate.js";
-import placeSearchItems from "./utils/placeSearchItems.js";
+import searchData from "./utils/searchData.js";
+// import placeSearchItems from "./utils/placeSearchItems.js";
 
 
 
@@ -9,11 +10,12 @@ const loaderElement = document.querySelector("#loader");
 
 
 let searchButton = document.querySelector('#searchButton');
+
 searchButton.addEventListener('click', (e) =>{
-    
     e.preventDefault();
-    
-    placeSearchItems();
+    let inputBox = document.querySelector('#searchStr');
+    let searchString = inputBox.value;
+    searchData(searchString);
     
 });
 
@@ -40,5 +42,5 @@ setTimeout(() => {
     loaderElement.classList.add("hidden");
     
     placeAllItems();
-}, 1000);
+}, 200);
 
