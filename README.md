@@ -1,16 +1,18 @@
 # 🥘 Recipe Finder App
 
-A simple and responsive **Recipe App** built using **Vanilla JavaScript**, **HTML**, and **Tailwind CSS**. This app fetches recipe data from an **open API** and displays each recipe as a clean, responsive card with relevant details like the title, image, ingredients, and instructions.
+A simple and responsive **Recipe App** built using **Vanilla JavaScript**, **HTML**, and **Tailwind CSS**. This app fetches recipe data from the **[TheMealDB API](https://www.themealdb.com/)** and displays each recipe in a clean, responsive card format with images, ingredients, and instructions.
+
+👉 **Live Demo:** [https://mealdbapiproject.netlify.app/](https://mealdbapiproject.netlify.app/)
 
 ---
 
 ## 🚀 Features
 
-- 🔍 Search and fetch recipes from an open API
-- 🧾 Displays recipe details in beautiful cards
-- 💡 Built with pure **Vanilla JavaScript** — no frameworks
-- 🎨 Styled using **Tailwind CSS** for a clean and modern look
-- 📱 Fully responsive and mobile-friendly layout
+- 🔍 Fetches real-time recipe data from TheMealDB API
+- 🧾 Displays recipe info in dynamic, styled cards
+- 💡 Built with 100% Vanilla JavaScript — no frameworks
+- 🎨 Tailwind CSS for clean, responsive UI
+- 📱 Fully mobile-friendly
 
 ---
 
@@ -20,11 +22,11 @@ A simple and responsive **Recipe App** built using **Vanilla JavaScript**, **HTM
 - **Tailwind CSS**
 - **JavaScript (ES6+)**
 - **Fetch API**
-- **[TheMealDB API](https://www.themealdb.com/)** *(or replace with your actual API)*
+- **[TheMealDB API](https://www.themealdb.com/)**
 
 ---
 
-## 📂 How to Run
+## 📂 How to Run Locally
 
 1. **Clone the repository:**
 
