@@ -31,5 +31,5 @@ A simple and responsive **Recipe App** built using **Vanilla JavaScript**, **HTM
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/recipe-app.git
+   git clone https://github.com/rasel-33/UIandAPI
    cd recipe-app
