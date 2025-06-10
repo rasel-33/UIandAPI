@@ -6,6 +6,7 @@ const loaderElement = document.querySelector("#loader");
 
 
 let noElement = document.createElement('p');
+noElement.classList.add("mt-[100px]")
 noElement.innerHTML = "No data Found!!"
 
 export default async function placeSearchItems(){
@@ -14,9 +15,8 @@ export default async function placeSearchItems(){
     let searchString = inputBox.value;
     placeHolder.replaceChildren();
     let responseData = await searchData(searchString);
-    console.log(typeof(responseData));
-    console.log(responseData);
-    if(responseData !== null){
+    if(responseData.meals !== undefined){
+        console.log("Entering the For each");
         responseData.forEach((element) => {
             const newElement = createCardTemplate(element);
             placeHolder.appendChild(newElement);

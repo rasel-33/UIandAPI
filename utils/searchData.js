@@ -3,6 +3,7 @@ export default async function searchData(searchStr){
     try{
         const response = await fetch(searchUrl);
         const data = await response.json();
+        console.log(data.meals.length);
         if( response.ok && data.meals.length > 0){
             let searchDataArray = data.meals.map(({idMeal, strMeal, strInstructions, strMealThumb}) => ({
                 id: idMeal,
