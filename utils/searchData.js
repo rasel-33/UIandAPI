@@ -34,8 +34,9 @@ export default async function searchData(searchStr){
         
         
     } catch(err){
-        loaderElement.classList.remove("hidden");
         placeHolder.replaceChildren();
+        loaderElement.classList.add("hidden");
+        
         console.log("Oh allah make it possible!!");
         placeHolder.appendChild(noElement);
     }
